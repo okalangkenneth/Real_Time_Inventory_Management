@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  inventoryservice:
+    image: ${DOCKER_REGISTRY-}inventoryservice
+    build:
+      context: .
+      dockerfile: InventoryService/Dockerfile
+
+  reportingservice:
+    image: ${DOCKER_REGISTRY-}reportingservice
+    build:
+      context: .
+      dockerfile: ReportingService/Dockerfile
+
+
+  userservice:
+    image: ${DOCKER_REGISTRY-}userservice
+    build:
+      context: .
+      dockerfile: UserService/Dockerfile
+
