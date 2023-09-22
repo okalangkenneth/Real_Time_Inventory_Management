@@ -6,17 +6,20 @@ services:
     build:
       context: .
       dockerfile: InventoryService/Dockerfile
+   
 
   reportingservice:
     image: ${DOCKER_REGISTRY-}reportingservice
     build:
       context: .
       dockerfile: ReportingService/Dockerfile
-
+    
 
   userservice:
     image: ${DOCKER_REGISTRY-}userservice
     build:
       context: .
       dockerfile: UserService/Dockerfile
+    
+
 
